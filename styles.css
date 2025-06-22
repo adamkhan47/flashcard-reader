@@ -5,6 +5,8 @@ h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     font-weight: 200;
+    transition: 0.1s;
+    display: inline;
 }
 button {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -15,4 +17,22 @@ button {
     background: rgb(41, 41, 41);
     border-radius: 1.563rem;
     border-color: rgb(240,240,240);
+    border-style:solid;
+    transition: 0.1s;
+}
+h1:hover {  
+    font-weight: bold;
+}
+button:hover {
+    background: rgb(50,50,50);
+    font-size:1.1rem;   
+    width:6.2rem;
+    height:3.2rem;
+    font-weight: bold;
+}
+button:active {
+    width: 6.8rem;
+    height: 3.8rem;
+    font-weight: bolder;
+    font-size: 1.3rem;
 }
