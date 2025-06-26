@@ -1,3 +1,10 @@
 function flashCardUpload() {
-    alert("Upload it -- this is not done.")
+    let valid = false;
+    try {
+            
+    } catch (error) {
+        
+    }
+    if (valid) {document.getElementById("flashinfo").style.visibility = "visible";}
+
 }
