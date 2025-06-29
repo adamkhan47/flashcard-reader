@@ -1,10 +1,3 @@
 function flashCardUpload() {
-    let valid = false;
-    try {
-            
-    } catch (error) {
-        
-    }
-    if (valid) {document.getElementById("flashinfo").style.visibility = "visible";}
-
+    window.open("http://adamkhan47.github.io/flashcardMaker");
 }
