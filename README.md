@@ -1,2 +1,2 @@
-# flashcard-gui
-flashcard-gui is.. a flashcard viewer. no backend required, just use the github pages
+# flashcard-reader
+flashcard-reader is.. a flashcard reader. no backend required, just use the github pages

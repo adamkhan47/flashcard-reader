@@ -1,3 +1,3 @@
-function flashCardUpload() {
+function flashcardUpload() {
     window.open("http://adamkhan47.github.io/flashcard-maker");
 }
