@@ -8,7 +8,10 @@ function flashcardLoad() {
     document.getElementById('flipThing').innerHTML = stored.term[0];
 }
 function buttonFlip() {
-    if (shown === 0) {
+    console.log("should flip");
+    console.log(shown);
+    console.log(number);
+    if (shown === 0) { // If term is shown
         shown = 1;
         document.getElementById('flipThing').innerHTML = stored.def[number];
     }
@@ -23,10 +26,10 @@ function buttonLeft() {
     else {
         number = number-1;
         if (shown === 0) {
-            document.getElementById('flipThing').innerHTML = stored.def[number];
+            document.getElementById('flipThing').innerHTML = stored.term[number];
         }
         else {
-            document.getElementById('flipThing').innerHTML = stored.term[number];
+            document.getElementById('flipThing').innerHTML = stored.def[number];
         }
     }
 }
@@ -37,10 +40,10 @@ function buttonRight() {
     else {
         number = number+1;
         if (shown === 0) {
-            document.getElementById('flipThing').innerHTML = stored.def[number];
+            document.getElementById('flipThing').innerHTML = stored.term[number];
         }
         else {
-            document.getElementById('flipThing').innerHTML = stored.term[number];
+            document.getElementById('flipThing').innerHTML = stored.def[number];
         }
     }
 }
