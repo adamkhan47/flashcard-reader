@@ -11,11 +11,13 @@
     <h1>Flashcard Reader</h1> <br>
     <h2 class="tutorial">Make sure you use <a href="https://adamkhan47.github.io/flashcard-maker">Flashcard Maker</a> to get flashcards.</h2> <br> <br>
     <button onclick="flashcardLoad()">Load Flashcard</button>
-    <br>
+    <br> <br> <br>
     <div id="flashinfo">
-        <h3>Info stuff</h3>
+        <h3 id="flipThing">Info stuff</h3>
         <br>
-        <h4>Tap to flip</h4>
+        <button onclick="buttonFlip()">Tap to flip</button> <br>
+        <button onclick="buttonLeft()">Left</button>
+        <button onclick="buttonRight()">Right</button>
     </div>
     <script src="script.js"></script>   
 </body>

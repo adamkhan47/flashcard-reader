@@ -32,7 +32,6 @@ button {
     border-color: rgb(240,240,240);
     border-style:solid;
     transition: 0.1s;
-    visibility: visible;
     margin-right: 2rem;
 }
 h1:hover {  
@@ -59,10 +58,13 @@ div {
     color: white;
     border: solid white 2px;
     border-radius: 1.563rem;
-    width: 10rem;
+    width: 20rem;
     height: auto;
     text-align: center;
     visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
 }
 a {
     color: white;
