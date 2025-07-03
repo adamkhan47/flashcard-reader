@@ -61,18 +61,23 @@ div {
     width: 20rem;
     height: auto;
     text-align: center;
-    visibility: hidden;
     justify-content: center;
     align-items: center;
     margin-right: auto;
+    visibility: hidden;
 }
 #popup {
-    width: 30rem;
+    width: auto;
     height: auto;
     text-align: left;
     line-height: 2rem;
     font-size: 2rem;
+    visibility: hidden;
 }
 a {
     color: white;
+}
+h3 {
+    font-size: 2.3rem;
+    line-height:normal;
 }
