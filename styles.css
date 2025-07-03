@@ -66,6 +66,13 @@ div {
     align-items: center;
     margin-right: auto;
 }
+#popup {
+    width: 30rem;
+    height: auto;
+    text-align: left;
+    line-height: 2rem;
+    font-size: 2rem;
+}
 a {
     color: white;
 }

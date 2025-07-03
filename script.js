@@ -8,8 +8,12 @@ let lengthOfArray = [];
 lengthOfArray = 0;
 function flashcardLoad() {
     const listOfFlashCards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
-    let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashCards);
+    //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashCards);
+    popup.style.visibility = 'visible';
+    for (let i = 0; i<listOfFlashCards.length; i++) {
 
+        
+    }
     if (listOfFlashCards.includes(answer)) {
         stored.term = JSON.parse(localStorage.getItem(answer)).term;
         stored.def = JSON.parse(localStorage.getItem(answer)).def;
