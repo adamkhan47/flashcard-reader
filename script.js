@@ -6,27 +6,34 @@ let number = 0;
 let shown = 0;
 let lengthOfArray = [];
 lengthOfArray = 0;
-let loaded=false;
+let listOfFlashcards = [];
 function flashcardLoad() {
-    const listOfFlashCards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
-    //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashCards);
+    listOfFlashcards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
+    //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashcards);
     popup.style.visibility = 'visible';
-    for (let i = 0; i<listOfFlashCards.length; i++) {
-        const buttonContainer = document.getElementById('popup');
+    const buttonContainer = document.getElementById('popup');
+    buttonContainer.innerHTML = '';
+    for (let i = 0; i<listOfFlashcards.length; i++) {
         let button = document.createElement('button');
-        button.innerHTML = listOfFlashCards[i];
+        button.innerHTML = listOfFlashcards[i];
         button.id = 'button' + i;
+        button.addEventListener('click', () => buttonLoad(i));
         buttonContainer.appendChild(button);
     }
-    loaded = true;
-    /* if (listOfFlashCards.includes(answer)) {
-        stored.term = JSON.parse(localStorage.getItem(answer)).term;
-        stored.def = JSON.parse(localStorage.getItem(answer)).def;
+}
+function buttonLoad(i) {
+    console.log(listOfFlashcards);
+    if (listOfFlashcards.includes(listOfFlashcards[i])) {
+        stored.term = JSON.parse(localStorage.getItem(listOfFlashcards[i])).term;
+        stored.def = JSON.parse(localStorage.getItem(listOfFlashcards[i])).def;
         lengthOfArray = stored.term;
         lengthOfArray = lengthOfArray.length;
         document.getElementById("flashinfo").style.visibility = "visible";
         document.getElementById('flipThing').innerHTML = stored.term[0];
-    } */
+    }
+    else {
+        console.log("fail");
+    }
 }
 function buttonFlip() {
     console.log("should flip");
