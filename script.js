@@ -6,24 +6,27 @@ let number = 0;
 let shown = 0;
 let lengthOfArray = [];
 lengthOfArray = 0;
+let loaded=false;
 function flashcardLoad() {
     const listOfFlashCards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
     //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashCards);
     popup.style.visibility = 'visible';
-    document.getElementById("list").innerHTML = "";
     for (let i = 0; i<listOfFlashCards.length; i++) {
-        const li = document.createElement("li");
-        li.textContent = listOfFlashCards[i];
-        document.getElementById("list").appendChild(li);
+        const buttonContainer = document.getElementById('popup');
+        let button = document.createElement('button');
+        button.innerHTML = listOfFlashCards[i];
+        button.id = 'button' + i;
+        buttonContainer.appendChild(button);
     }
-    if (listOfFlashCards.includes(answer)) {
+    loaded = true;
+    /* if (listOfFlashCards.includes(answer)) {
         stored.term = JSON.parse(localStorage.getItem(answer)).term;
         stored.def = JSON.parse(localStorage.getItem(answer)).def;
         lengthOfArray = stored.term;
         lengthOfArray = lengthOfArray.length;
         document.getElementById("flashinfo").style.visibility = "visible";
         document.getElementById('flipThing').innerHTML = stored.term[0];
-    }
+    } */
 }
 function buttonFlip() {
     console.log("should flip");
