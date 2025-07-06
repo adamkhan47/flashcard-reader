@@ -10,13 +10,15 @@ let listOfFlashcards = [];
 function flashcardLoad() {
     listOfFlashcards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
     //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashcards);
-    popup.style.visibility = 'visible';
+    document.getElementById('popup').style.visibility = 'visible';
     const buttonContainer = document.getElementById('popup');
-    buttonContainer.innerHTML = '';
+    buttonContainer.innerHTML = '<h3>&nbsp&nbspCurrent flashcards available:</h3> <br>';
     for (let i = 0; i<listOfFlashcards.length; i++) {
         let button = document.createElement('button');
+        button.classList.add('flashcard-button');
         button.innerHTML = listOfFlashcards[i];
         button.id = 'button' + i;
+        button.class = 'woah';
         button.addEventListener('click', () => buttonLoad(i));
         buttonContainer.appendChild(button);
     }

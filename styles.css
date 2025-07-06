@@ -81,3 +81,14 @@ h3 {
     font-size: 2.3rem;
     line-height:normal;
 }
+.flashcard-button {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.flashcard-button:hover {
+    font-size: 1.7rem;
+}
+.flashcard-button:active {
+    font-size: 1.9rem;
+}
