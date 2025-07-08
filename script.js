@@ -54,7 +54,6 @@ function buttonLeft() {
     if (number === 0) {}
     else {
         number = number-1;
-        if (number===0) {document.getElementById('left').disabled = true;}
         if (shown === 0) {
             document.getElementById('flipThing').innerHTML = stored.term[number];
         }
@@ -64,12 +63,9 @@ function buttonLeft() {
     }
 }
 function buttonRight() {
-    console.log(number);
-    if (number === lengthOfArray-1) {
-    }
+    if (number === lengthOfArray-1) {}
     else {
         number = number+1;
-        if (number===lengthOfArray-1) {document.getElementById('left').disabled = true;}
         if (shown === 0) {
             document.getElementById('flipThing').innerHTML = stored.term[number];
         }
