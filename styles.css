@@ -65,6 +65,7 @@ div {
     align-items: center;
     margin-right: auto;
     visibility: hidden;
+    margin: 0 auto;
 }
 #popup {
     width: auto;
@@ -73,6 +74,10 @@ div {
     line-height: 2rem;
     font-size: 2rem;
     visibility: hidden;
+}
+#flashinfo {
+    margin: 0 auto;
+    scale: 1.2;
 }
 a {
     color: white;
