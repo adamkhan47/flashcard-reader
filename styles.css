@@ -1,6 +1,6 @@
 body {
     background-color: rgb(19, 19, 19);
-    max-width: 700px;
+    max-width: 43.75rem;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -96,4 +96,7 @@ h3 {
 }
 .flashcard-button:active {
     font-size: 1.9rem;
+}
+#flashinfo {
+    
 }

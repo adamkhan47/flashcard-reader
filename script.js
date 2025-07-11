@@ -11,6 +11,7 @@ function flashcardLoad() {
     listOfFlashcards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
     //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashcards);
     document.getElementById('popup').style.visibility = 'visible';
+    document.getElementById('flashinfo').style.visibility = 'hidden';
     const buttonContainer = document.getElementById('popup');
     buttonContainer.innerHTML = '<h3>&nbsp&nbspCurrent flashcards available:</h3> <br>';
     for (let i = 0; i<listOfFlashcards.length; i++) {
@@ -18,13 +19,14 @@ function flashcardLoad() {
         button.classList.add('flashcard-button');
         button.innerHTML = listOfFlashcards[i];
         button.id = 'button' + i;
-        button.class = 'woah';
+        button.classList.add('woah');
         button.addEventListener('click', () => buttonLoad(i));
         buttonContainer.appendChild(button);
     }
 }
 function buttonLoad(i) {
-    console.log(listOfFlashcards);
+    // hide flashcard loader thing
+    document.getElementById('popup').style.visibility = 'hidden';
     if (listOfFlashcards.includes(listOfFlashcards[i])) {
         stored.term = JSON.parse(localStorage.getItem(listOfFlashcards[i])).term;
         stored.def = JSON.parse(localStorage.getItem(listOfFlashcards[i])).def;
