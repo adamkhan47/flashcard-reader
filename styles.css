@@ -97,6 +97,12 @@ h3 {
 .flashcard-button:active {
     font-size: 1.9rem;
 }
-#flashinfo {
-    
+#loader {
+    width: 9rem;
+    height: 3rem;
+    font-size: auto;
+}
+#loader:hover {
+    width: 10rem;
+    height:4rem;
 }
