@@ -10,8 +10,8 @@ let listOfFlashcards = [];
 function flashcardLoad() {
     listOfFlashcards = JSON.parse(localStorage.getItem('listOfAllCurrentFlashCards'));
     //let answer = prompt("Type in the name of the flashcard you want to load. Here's the ones you have saved: " + listOfFlashcards);
-    document.getElementById('popup').style.visibility = 'visible';
     document.getElementById('flashinfo').style.visibility = 'hidden';
+    document.getElementById('popup').style.visibility = 'visible';
     const buttonContainer = document.getElementById('popup');
     buttonContainer.innerHTML = '<h3>&nbsp&nbspCurrent flashcards available:</h3> <br>';
     for (let i = 0; i<listOfFlashcards.length; i++) {
@@ -26,6 +26,7 @@ function flashcardLoad() {
 }
 function buttonLoad(i) {
     // hide flashcard loader thing
+    document.getElementById('popup').innerHTML = '';
     document.getElementById('popup').style.visibility = 'hidden';
     if (listOfFlashcards.includes(listOfFlashcards[i])) {
         stored.term = JSON.parse(localStorage.getItem(listOfFlashcards[i])).term;
